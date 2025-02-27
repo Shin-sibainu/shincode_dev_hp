@@ -31,7 +31,9 @@ export function Header() {
   return (
     <motion.header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#030303]/80 backdrop-blur-sm py-4" : "bg-transparent py-6"
+        isScrolled
+          ? "bg-[#030303]/80 backdrop-blur-sm py-4"
+          : "bg-transparent py-6"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -44,10 +46,10 @@ export function Header() {
         >
           <Code2 className="h-8 w-8 text-white group-hover:rotate-12 transition-transform duration-300" />
           <span className="font-mono text-xl font-bold text-white">
-            Shin<span className="text-rose-400">Code</span>_Buz
+            Shin<span className="text-rose-400">Code</span>_Dev
           </span>
         </button>
-        
+
         <nav className="hidden md:flex items-center space-x-8">
           <button
             onClick={() => scrollToSection("works")}

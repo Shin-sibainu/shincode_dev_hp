@@ -10,10 +10,18 @@ interface WorkCardProps {
   description: string;
   tags: string[];
   image: string;
+  url: string;
   index: number;
 }
 
-function WorkCard({ title, description, tags, image, index }: WorkCardProps) {
+function WorkCard({
+  title,
+  description,
+  tags,
+  image,
+  url,
+  index,
+}: WorkCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -22,44 +30,51 @@ function WorkCard({ title, description, tags, image, index }: WorkCardProps) {
       viewport={{ once: true }}
       className="group relative h-full"
     >
-      <div className="flex flex-col h-full overflow-hidden rounded-xl bg-gradient-to-br from-white/[0.05] to-transparent border border-white/[0.08] backdrop-blur-sm">
-        <div className="relative aspect-[16/9] overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-rose-500/10 mix-blend-overlay opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="bg-white/10 hover:bg-white/20 text-white border border-white/20"
-            >
-              <ExternalLink className="h-5 w-5" />
-            </Button>
-          </div>
-        </div>
-        <div className="flex flex-col flex-grow p-6">
-          <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1 text-sm rounded-full bg-white/[0.05] border border-white/[0.08] text-white/60 hover:bg-white/10 hover:text-white/80 transition-colors duration-300"
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block h-full"
+      >
+        <div className="flex flex-col h-full overflow-hidden rounded-xl bg-gradient-to-br from-white/[0.05] to-transparent border border-white/[0.08] backdrop-blur-sm">
+          <div className="relative aspect-[16/9] overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-rose-500/10 mix-blend-overlay opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="bg-white/10 hover:bg-white/20 text-white border border-white/20"
               >
-                {tag}
-              </span>
-            ))}
+                <ExternalLink className="h-5 w-5" />
+              </Button>
+            </div>
           </div>
-          <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-white/90">
-            {title}
-          </h3>
-          <p className="text-white/50 group-hover:text-white/70 transition-colors duration-300 line-clamp-2">
-            {description}
-          </p>
+          <div className="flex flex-col flex-grow p-6">
+            <div className="flex flex-wrap gap-2 mb-4">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="px-3 py-1 text-sm rounded-full bg-white/[0.05] border border-white/[0.08] text-white/60 hover:bg-white/10 hover:text-white/80 transition-colors duration-300"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-white/90">
+              {title}
+            </h3>
+            <p className="text-white/50 group-hover:text-white/70 transition-colors duration-300 line-clamp-2">
+              {description}
+            </p>
+          </div>
         </div>
-      </div>
+      </a>
     </motion.div>
   );
 }
@@ -72,6 +87,7 @@ export function Works() {
       tags: ["Next.js", "TypeScript", "Notion API", "Neon"],
       image:
         "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=2940&q=80",
+      url: "https://www.notepress.xyz",
     },
     {
       title: "企業/個人ホームページ",
@@ -79,13 +95,15 @@ export function Works() {
       tags: ["Next.js", "TypeScript", "Shadcn/ui", "Framer Motion"],
       image:
         "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=2940&q=80",
+      url: "https://ai-driven-online-course.vercel.app",
     },
     {
-      title: "SaaSアプリケーション",
-      description: "高品質な管理ダッシュボードとデータベース管理",
-      tags: ["Next.js", "TypeScript", "Supabase", "Clerk"],
+      title: "ブログメディア",
+      description: "高品質なブログメディアをNotionと連携して開発",
+      tags: ["Next.js", "TypeScript", "Notion"],
       image:
         "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2940&q=80",
+      url: "https://classic.notepress.xyz",
     },
     // {
     //   title: "不動産マッチングアプリ",
@@ -219,6 +237,7 @@ export function Works() {
               description={work.description}
               tags={work.tags}
               image={work.image}
+              url={work.url}
               index={index}
             />
           ))}
