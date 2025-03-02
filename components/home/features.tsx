@@ -52,40 +52,34 @@ function FeatureCard({
 export function Features() {
   const features = [
     {
-      title: "Webアプリケーション",
+      title: "AIアプリ開発",
       description:
-        "特定の業務ニーズに合わせたカスタムWebアプリケーション。使いやすいUIと堅牢なバックエンドで、ビジネス課題を解決します。",
-      icon: Code2,
-    },
-    {
-      title: "SaaS開発",
-      description:
-        "サブスクリプションモデルのクラウドサービス開発。スケーラブルなアーキテクチャと使いやすいUIで、継続的な収益を生み出します。",
-      icon: Sparkles,
+        "ChatGPTやClaudeのAPIを利用し、それぞれの業界の問題を解決するアプリやツールを開発します。",
+      icon: Laptop,
     },
     {
       title: "個人・企業HP開発",
       description:
-        "モダンな技術とデザインで、魅力的なウェブサイトを制作。レスポンシブ対応で、スマートフォンやタブレットでも最適な表示を実現します。",
+        "AIを活用したHP開発。AIを駆使するので短納期を実現します。レスポンシブ対応で、スマートフォンやタブレットでも最適な表示を実現します。",
       icon: Clock,
     },
     {
-      title: "AI統合Webアプリケーション",
+      title: "SaaS開発",
       description:
-        "AIを活用したWebアプリケーションの開発。ChatGPTなどのAIモデルを統合し、ユーザー体験を向上させる機能を実装します。",
-      icon: Laptop,
+        "サブスクリプションモデルのWebサービス開発。高品質なダッシュボードページでユーザーの悩みを解決させます。",
+      icon: Sparkles,
     },
     {
-      title: "メディアサイト",
+      title: "自動化ツール",
       description:
-        "ブログやニュースサイトなどの情報発信メディア。SEO対策とコンテンツ管理システムで、効果的な情報発信を実現します。",
-      icon: MessageSquare,
-    },
-    {
-      title: "業務効率化・自動化ツール",
-      description:
-        "社内業務の自動化や効率化を実現するツール。データ処理、レポート生成、タスク管理など、日々の業務をスムーズにします。",
+        "AIと各種アプリAPIを統合し、便利なWebツールを開発します。Apifyを用いたSNSスクレイピングも可能(X/Youtube/Tiktok等)。",
       icon: Zap,
+    },
+    {
+      title: "ブログメディア",
+      description:
+        "CMSを利用したブログ投稿メディアを構築。NotionをCMSにしたブログコンテンツ管理も可能。SEO対策も全て行います。",
+      icon: MessageSquare,
     },
   ];
 

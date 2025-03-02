@@ -33,6 +33,7 @@ export function Hero() {
 
   return (
     <section
+      id="hero"
       className="relative flex items-center justify-center overflow-hidden bg-[#030303] pb-4 md:pb-24 lg:pb-32"
       style={{ minHeight: "calc(100vh - 4rem)" }}
     >
@@ -108,7 +109,7 @@ export function Hero() {
               </span>
               <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300">
-                迅速なWeb開発
+                高速なWeb開発
               </span>
             </h1>
           </motion.div>
@@ -120,8 +121,7 @@ export function Hero() {
             animate="visible"
           >
             <p className="text-base sm:text-lg md:text-xl text-white/70 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-              AIを駆使して小～中規模のアプリやツールを短納期で開発。
-              最新技術とクリーンなコードで、あなたのビジネスニーズに応えます。
+              AI駆動開発を通して小～中規模のアプリやツールを短納期で開発します。
             </p>
           </motion.div>
 

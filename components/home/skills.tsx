@@ -84,7 +84,7 @@ export function Skills() {
     },
     {
       title: "AI統合開発",
-      description: "最新のAI技術を活用し、インテリジェントな機能を実装します。",
+      description: "最新のAIのAPIを活用し、ユーザーの悩みを解決します。",
       technologies: ["OpenAI API", "Claude API", "Cursor"],
       icon: Sparkles,
     },
@@ -99,13 +99,13 @@ export function Skills() {
       title: "セキュリティ",
       description:
         "最新のセキュリティベストプラクティスを適用し、安全なアプリケーションを構築します。",
-      technologies: ["OAuth", "JWT", "HTTPS", "Data Encryption"],
+      technologies: ["OAuth", "Session", "HTTPS"],
       icon: Shield,
     },
   ];
 
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden bg-[#030303]">
+    <section id="skills" className="relative py-24 md:py-32 overflow-hidden bg-[#030303]">
       <div className="absolute inset-0 bg-gradient-to-br from-violet-500/[0.03] via-transparent to-amber-500/[0.03] blur-3xl" />
 
       <div className="absolute inset-0 overflow-hidden">

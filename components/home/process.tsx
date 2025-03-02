@@ -168,7 +168,7 @@ export function Process() {
             <p className="text-center text-white/80 text-lg mt-2">
               アプリの機能や複雑さによって異なりますが、
               <span className="font-bold text-white">
-                小〜中規模のアプリは2〜4週間程度
+                小〜中規模のアプリは1ヶ月~2ヶ月
               </span>
               で納品可能です。
             </p>

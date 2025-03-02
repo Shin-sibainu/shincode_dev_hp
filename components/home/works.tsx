@@ -86,7 +86,7 @@ export function Works() {
       description: "NotionをCMSにしたブログ投稿ができるプラットフォーム",
       tags: ["Next.js", "TypeScript", "Notion API", "Neon"],
       image:
-        "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=2940&q=80",
+        "https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&w=2940&q=80",
       url: "https://www.notepress.xyz",
     },
     {
@@ -94,7 +94,7 @@ export function Works() {
       description: "最新のAIツールを活用した高品質なHP開発",
       tags: ["Next.js", "TypeScript", "Shadcn/ui", "Framer Motion"],
       image:
-        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=2940&q=80",
+        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2940&q=80",
       url: "https://ai-driven-online-course.vercel.app",
     },
     {
@@ -102,7 +102,7 @@ export function Works() {
       description: "高品質なブログメディアをNotionと連携して開発",
       tags: ["Next.js", "TypeScript", "Notion"],
       image:
-        "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2940&q=80",
+        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=2940&q=80",
       url: "https://classic.notepress.xyz",
     },
     // {
@@ -148,7 +148,10 @@ export function Works() {
   ];
 
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden bg-[#030303]">
+    <section
+      id="works"
+      className="relative py-24 md:py-32 overflow-hidden bg-[#030303]"
+    >
       <div className="absolute inset-0 bg-gradient-to-br from-rose-500/[0.03] via-transparent to-indigo-500/[0.03] blur-3xl" />
 
       {/* 装飾的な背景要素 */}

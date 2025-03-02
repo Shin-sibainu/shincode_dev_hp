@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ElegantShape } from "@/components/ui/elegant-shape";
+import Link from "next/link";
 
 interface PricingPlanProps {
   title: string;
@@ -67,16 +68,18 @@ function PricingPlan({
           ))}
         </ul>
 
-        <Button
-          size="lg"
-          className={`w-full mt-auto ${
-            recommended
-              ? "bg-gradient-to-r from-teal-500 to-emerald-500 text-white hover:from-teal-600 hover:to-emerald-600"
-              : "bg-white/10 hover:bg-white/20 text-white border border-white/20"
-          }`}
-        >
-          お問い合わせ
-        </Button>
+        <Link href="#contact" className="block w-full">
+          <Button
+            size="lg"
+            className={`w-full mt-auto ${
+              recommended
+                ? "bg-gradient-to-r from-teal-500 to-emerald-500 text-white hover:from-teal-600 hover:to-emerald-600"
+                : "bg-white/10 hover:bg-white/20 text-white border border-white/20"
+            }`}
+          >
+            お問い合わせ
+          </Button>
+        </Link>
       </div>
     </motion.div>
   );
@@ -85,42 +88,40 @@ function PricingPlan({
 export function Pricing() {
   const plans = [
     {
-      title: "ベーシック",
-      price: "50万円",
-      description: "小規模なWebサイトやアプリケーション向け",
+      title: "ライト",
+      price: "15〜30万円",
+      description: "小規模なツールや機能追加向け",
       features: [
         "要件定義・設計",
+        "単一機能の開発",
         "レスポンシブデザイン",
-        "基本的なCMS機能",
-        "SEO対策",
-        "3ヶ月間の保守サポート",
+        "2週間〜1ヶ月の開発期間",
+        "1ヶ月間のサポート",
       ],
     },
     {
-      title: "スタンダード",
-      price: "100万円",
-      description: "中規模なWebアプリケーション向け",
+      title: "ベーシック",
+      price: "30〜50万円",
+      description: "小規模なWebアプリケーション向け",
       features: [
         "要件定義・設計",
-        "カスタムデザイン",
-        "アカウント管理機能",
-        "決済システム連携",
-        "API開発・連携",
-        "6ヶ月間の保守サポート",
+        "AI機能の基本統合",
+        "レスポンシブデザイン",
+        "基本的なCMS機能",
+        "2ヶ月間の保守サポート",
       ],
       recommended: true,
     },
     {
-      title: "エンタープライズ",
-      price: "200万円",
-      description: "大規模なシステム開発向け",
+      title: "スタンダード",
+      price: "50〜100万円",
+      description: "中規模なWebアプリケーション向け",
       features: [
         "要件定義・設計",
-        "完全カスタマイズ対応",
-        "AI機能の統合",
-        "高度なセキュリティ対策",
-        "パフォーマンス最適化",
-        "1年間の保守サポート",
+        "カスタムデザイン",
+        "高度なAI機能統合",
+        "API開発・連携",
+        "4ヶ月間の保守サポート",
       ],
     },
   ];
@@ -203,7 +204,7 @@ export function Pricing() {
                 具体的な料金は、プロジェクトの要件によって変動する場合があります。
               </p>
               <p className="text-white/80">
-                規模に応じて柔軟に対応いたしますので、カスタムプランについてもお気軽にご相談ください。
+                規模に応じて柔軟に対応いたしますので、お気軽にご相談ください。
               </p>
             </div>
           </div>

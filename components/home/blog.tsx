@@ -7,7 +7,7 @@ import { ElegantShape } from "@/components/ui/elegant-shape";
 
 export function Blog() {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden bg-[#030303]">
+    <section id="blog" className="relative py-24 md:py-32 overflow-hidden bg-[#030303]">
       <div className="absolute inset-0 bg-gradient-to-br from-amber-500/[0.03] via-transparent to-violet-500/[0.03] blur-3xl" />
 
       <div className="absolute inset-0 overflow-hidden">
