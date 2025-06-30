@@ -82,7 +82,15 @@ function WorkCard({
 export function Works() {
   const works = [
     {
-      title: "Notionブログ構築プラットフォーム",
+      title: "SaaS(サムネAI)",
+      description: "スケーラブルで高機能なSaaSアプリケーションを開発",
+      tags: ["Next.js", "TypeScript", "Stripe", "Firebase"],
+      image:
+        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=2940&q=80",
+      url: "https://www.samune-ai.jp/",
+    },
+    {
+      title: "Notionブログ構築プラットフォーム(NotePress)",
       description: "NotionをCMSにしたブログ投稿ができるプラットフォーム",
       tags: ["Next.js", "TypeScript", "Notion API", "Neon"],
       image:
@@ -90,61 +98,30 @@ export function Works() {
       url: "https://www.notepress.xyz",
     },
     {
-      title: "企業/個人ホームページ",
-      description: "最新のAIツールを活用した高品質なHP開発",
-      tags: ["Next.js", "TypeScript", "Shadcn/ui", "Framer Motion"],
+      title: "キュレーションWebサイト(Catch Up)",
+      description:
+        "最新の技術トレンドを効率的に収集・閲覧できるキュレーションサイト",
+      tags: ["Next.js", "TypeScript", "Web Scraping", "Supabase"],
       image:
-        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2940&q=80",
-      url: "https://ai-driven-online-course.vercel.app",
+        "https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=2940&q=80",
+      url: "https://www.catchup-trends.com/",
     },
     {
-      title: "ブログメディア",
+      title: "ブログメディア(Classic)",
       description: "高品質なブログメディアをNotionと連携して開発",
       tags: ["Next.js", "TypeScript", "Notion"],
       image:
         "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=2940&q=80",
       url: "https://classic.notepress.xyz",
     },
-    // {
-    //   title: "不動産マッチングアプリ",
-    //   description:
-    //     "物件検索から内見予約まで、スムーズな不動産取引を実現するマッチングプラットフォームの開発。",
-    //   tags: ["React", "Node.js", "PostgreSQL", "AWS"],
-    //   image:
-    //     "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=2940&q=80",
-    // },
-    // {
-    //   title: "オンライン学習プラットフォーム",
-    //   description:
-    //     "インタラクティブな学習体験を提供する、モダンなオンライン教育プラットフォームの開発。",
-    //   tags: ["Next.js", "TypeScript", "Prisma", "Stripe"],
-    //   image:
-    //     "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2940&q=80",
-    // },
-    // {
-    //   title: "eコマースプラットフォーム",
-    //   description:
-    //     "最新のテクノロジーを活用した、高パフォーマンスなオンラインショッピングプラットフォームの開発。",
-    //   tags: ["Next.js", "TypeScript", "Shopify", "TailwindCSS"],
-    //   image:
-    //     "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=2940&q=80",
-    // },
-    // {
-    //   title: "健康管理アプリ",
-    //   description:
-    //     "ユーザーの健康データを分析し、パーソナライズされたアドバイスを提供するヘルスケアアプリケーションの開発。",
-    //   tags: ["React Native", "TypeScript", "Firebase", "Redux"],
-    //   image:
-    //     "https://images.unsplash.com/photo-1594882645126-14020914d58d?auto=format&fit=crop&w=2940&q=80",
-    // },
-    // {
-    //   title: "SNSプラットフォーム",
-    //   description:
-    //     "リアルタイムコミュニケーションと高度なコンテンツ共有機能を備えたソーシャルネットワークの開発。",
-    //   tags: ["Next.js", "GraphQL", "MongoDB", "Socket.io"],
-    //   image:
-    //     "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=2940&q=80",
-    // },
+    {
+      title: "企業/個人ホームページ(ShinCode Pro)",
+      description: "最新のAIツールを活用した高品質なHP開発",
+      tags: ["Next.js", "TypeScript", "Shadcn/ui", "Framer Motion"],
+      image:
+        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2940&q=80",
+      url: "https://ai-driven-online-course.vercel.app",
+    },
   ];
 
   return (
